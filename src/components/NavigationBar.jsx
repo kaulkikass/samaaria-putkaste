@@ -37,8 +37,8 @@ function NavigationBar() {
 
   return ( 
     <Navbar bg="light" variant="light">
-      <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
-          <Container>
+      <Container fluid style={{paddingLeft: '0px', paddingRight: '0px', marginLeft:"0px", marginRight:"0px"}}>
+          <Container className={styles.logoMargin}>
           <Navbar.Brand href="/">
             <img
               alt=""
@@ -74,8 +74,7 @@ function NavigationBar() {
       <Nav.Link as={Link} to="/ostukorv"><img
               alt=""
               src={require("../assets/cart1.png")}/></Nav.Link>
-      {cartSumCtx.cartSum.toFixed(2)} €
-      
+      <div className={styles.centerCart}>{cartSumCtx.cartSum.toFixed(2) } €</div>
       </Nav>
       </Container>
       </Container>

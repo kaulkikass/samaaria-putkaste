@@ -5,8 +5,8 @@
 
 }
 
-.brandMargin {
-    margin-left: 0;
+.logoMargin {
+    margin-left: 10px;
     
 }
 
@@ -17,13 +17,14 @@
 .shoppingCart {
     display: flex;
     justify-content: flex-end;
+    
+    
+}
+
+.centerCart {
+    display: flex;
+    align-items: center;
 }
 
 
 
-.container{
-    margin-right : 0 !important;
-    margin-left : 0 !important;
-    padding-right : 0 !important;
-    padding-left : 0 !important;
-   }
