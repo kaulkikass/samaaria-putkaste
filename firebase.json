@@ -1,8 +1,7 @@
 {
-  
   "hosting": {
-    "site": "react-webshop-07-22",
     "public": "build",
+    "site": "samaaria-putkaste",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -14,5 +13,8 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }

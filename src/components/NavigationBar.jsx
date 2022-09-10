@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import AuthContext from '../store/AuthContext';
 import CartSumContext from '../store/CartSumContext';
+import styles from '../css/Nav.module.css';
 
 function NavigationBar() {
   const { t, i18n } = useTranslation();
@@ -36,22 +37,51 @@ function NavigationBar() {
 
   return ( 
     <Navbar bg="light" variant="light">
-      <Container>
-        <Navbar.Brand as={Link} to="/">Webshop</Navbar.Brand>
-        <Nav className="me-auto">
+      <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
+          <Container>
+          <Navbar.Brand href="/">
+            <img
+              alt=""
+              src={require("../assets/samaaria-logo.png")}
+              width="200"
+              height="50"
+              className="d-inline-block align-top"
+            />{' '}
+          </Navbar.Brand>
+          </Container>
+        <Container>
+        <Nav  className={styles.textCentered}>
           {authCtx.loggedIn === true && <Nav.Link as={Link} to="/admin">{t('navbar.admin-button')}</Nav.Link>}
-          <Nav.Link as={Link} to="/meist">{t('navbar.about-button')}</Nav.Link>
-          <Nav.Link as={Link} to="/poed">{t('navbar.shops-button')}</Nav.Link>
-          <Nav.Link as={Link} to="/ostukorv">{t('navbar.cart-button')}</Nav.Link>
-          { authCtx.loggedIn === false && <Nav.Link as={Link} to="/logi-sisse">Logi sisse</Nav.Link>}
+          <Nav.Link as={Link} to="/meist">NAISED</Nav.Link>
+          <Nav.Link as={Link} to="/poed">MEHED</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">TÜDRUKUD</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">POISID</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">VÄIKELAPSED</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">KODUKAUP</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">KUNST</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">MEELELAHUTUS</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv">MEIST</Nav.Link>
+          <Nav.Link as={Link} to="/ostukorv"><img
+              alt=""
+              src={require("../assets/magnifying-glass (1).png")}/></Nav.Link>
+          
           { authCtx.loggedIn === true && <Nav.Link onClick={logout}>Logi välja</Nav.Link>}
-
-        </Nav>
+          </Nav>
+          </Container>
+        
+      <Container className={styles.shoppingCart}>
+      <Nav>
+      <Nav.Link as={Link} to="/ostukorv"><img
+              alt=""
+              src={require("../assets/cart1.png")}/></Nav.Link>
+      {cartSumCtx.cartSum.toFixed(2)} €
+      
+      </Nav>
       </Container>
-      <div>{cartSumCtx.cartSum.toFixed(2)} €</div>
-      <img className='lang' onClick={() => changeWebsiteLanguage('en')} src={require('../assets/english.png')} alt="" />
+      </Container>
+{/*       <img className='lang' onClick={() => changeWebsiteLanguage('en')} src={require('../assets/english.png')} alt="" />
       <img className='lang' onClick={() => changeWebsiteLanguage('ee')} src={require('../assets/estonian.png')} alt="" />
-      <img className='lang' onClick={() => changeWebsiteLanguage('ru')} src={require('../assets/russian.png')} alt="" />
+      <img className='lang' onClick={() => changeWebsiteLanguage('ru')} src={require('../assets/russian.png')} alt="" /> */}
     </Navbar>
    );
 }
