@@ -10,7 +10,7 @@ function CarouselGallery() {
 
       const [images, setImages] = useState([]);
       useEffect(() => {
-        fetch('https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/images.json')
+        fetch('https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/images.json')
           .then(res => res.json())
           .then(data => setImages(data || []))
       }, []);
@@ -22,10 +22,6 @@ function CarouselGallery() {
           src={element.src}
           alt={element.alt}
         />
-        <Carousel.Caption>
-          <h3>{element.header}</h3>
-          <p>{element.text}</p>
-        </Carousel.Caption>
       </Carousel.Item>)}
     </Carousel>
     </div> 

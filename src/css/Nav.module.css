@@ -24,7 +24,20 @@
 .centerCart {
     display: flex;
     align-items: center;
+    color: #F7F0E5
 }
 
+.navbarBackground {
+    background-color: #988157;
+}
+
+.navbarTextColor {
+    color: #F7F0E5
+
+}
+
+.dropdown-toggle::after {
+    display: none !important; 
+  }
 
 
