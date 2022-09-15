@@ -19,6 +19,9 @@ function AdminHome() {
       <Link to="/admin/lisa-kasutajaid">
         <Button>Lisa kasutajaid</Button>
       </Link>
+      <Link to="/admin/halda-bannereid">
+        <Button>Halda bannereid</Button>
+      </Link>
   </div> );
 }
 

@@ -15,7 +15,7 @@ function CarouselGallery() {
           .then(data => setImages(data || []))
       }, []);
     return ( 
-    <div>
+    <div className='carouselItemCenter'>
     <Carousel>
       { images.map(element =>  <Carousel.Item key={element.src}>
         <img

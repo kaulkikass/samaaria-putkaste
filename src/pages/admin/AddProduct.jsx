@@ -15,7 +15,7 @@ function AddProduct() {
     const activeRef = useRef();
     const [message, setMessage] = useState("");
     const [image, setImage] = useState("");
-    const productsDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/products.json';
+    const productsDb = 'https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/products.json';
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);                                  ///!!!! categories
     const categoriesDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/categories.json';

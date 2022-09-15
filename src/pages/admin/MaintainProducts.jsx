@@ -17,7 +17,7 @@ function MaintainProducts() {
      // on kogu aeg muutuvas seisundis(filtreeritakse/sorteeritakse jne)
     const [products, setProducts] = useState([]);
     const [isLoading, setLoading] = useState(false);
-    const productsDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/products.json';
+    const productsDb = 'https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/products.json';
      //uef on lühend
      useEffect(() => {
         setLoading(true);

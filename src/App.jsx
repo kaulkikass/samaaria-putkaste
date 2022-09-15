@@ -19,6 +19,8 @@ import SignIn from './pages/SignIn';
 import AddUser from './pages/admin/AddUser';
 import { useContext } from 'react';
 import AuthContext from './store/AuthContext';
+import MaintainBanners from './pages/admin/MaintainBanners';
+import NaisteRiided from './pages/Categories/Naised/NaisteRiided';
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
     <div className="App">
         <NavigationBar />
         <Routes>
+          <Route path='naised/riided' exact element = { <NaisteRiided /> } />
           <Route path='' exact element = { <HomePage /> } />
           <Route path='meist' exact element = { <AboutUs /> } />
           <Route path='poed' exact element = { <Shops /> } />
@@ -45,6 +48,7 @@ function App() {
           <Route path='admin/halda-tooteid' exact element = { <MaintainProducts /> } />
           <Route path='admin/halda-poode' exact element = { <MaintainShops /> } />
           <Route path='admin/halda-kategooriaid' exact element = { <MaintainCategories /> } />
+          <Route path='admin/halda-bannereid' exact element = { <MaintainBanners /> } />
           </>}
           {authCtx.loggedIn === false && 
           <Route path="admin/*" exact element={ <Navigate to="/logi-sisse" /> } />}

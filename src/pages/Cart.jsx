@@ -46,7 +46,7 @@ function Cart() {
   return ( 
   <div>
     {/* TEHKE KA TÜHJENDA OSTUKORV, MIDA NÄIDATAKSE VAID SIIS KUI OSTUKORVIS ON MIDAGI */}
-    <button>Kodus: tühjenda</button>
+    <button>Ostukorv tühi</button>
 
     {cart.map((element, index) => 
       <div className={styles.product} key={element.product.id}>

@@ -6,6 +6,8 @@ import SortDropdown from '../components/home/SortDropdown';
 import Product from '../components/home/Product';
 import CarouselGallery from '../components/home/CarouselGallery';
 import CategoryFilter from '../components/home/CategoryFilter';
+import NewProductsBar from '../components/home/NewProductsBar';
+
 
 
 
@@ -14,10 +16,8 @@ function HomePage() {
     const [databaseProducts, setDatabaseProducts] = useState([]); 
      // on kogu aeg muutuvas seisundis(filtreeritakse/sorteeritakse jne)
     const [products, setProducts] = useState([]);
-                    //---.map tagastab -- returns
-    const categories =[...new Set(databaseProducts.map(element => element.category))];
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const productsDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/products.json';
+                    //---.map tagastab -- return
+    const productsDb = 'https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/products.json';
     const [isLoading, setLoading] = useState(false);
     const [activePage, setActivePage] = useState(2);
     const [filteredProducts, setFilteredProducts] = useState([]);
@@ -65,20 +65,9 @@ function HomePage() {
     <div>
     
     <CarouselGallery />
+    <NewProductsBar />
     <ToastContainer />
     {isLoading === true && <Spinner />}
-        <CategoryFilter 
-          databaseProducts={databaseProducts}
-          setProducts={setProducts}
-          setFilteredProducts={setFilteredProducts}
-          setActivePage={setActivePage}
-        />
-
-        <SortDropdown 
-          filteredProducts = {filteredProducts}
-          updateProducts = {setProducts}
-          updatePage = {setActivePage}
-        /> 
         <div>{filteredProducts.length} toodet leitud</div>
         {products.map(element => 
           <Product element={element}

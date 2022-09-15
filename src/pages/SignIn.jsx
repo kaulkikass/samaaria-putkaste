@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'; // <---
 function SignIn() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const firebaseUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB_wh8v_WLLMaOSZGejwqUy9JYfVtrCYuk"
+  const firebaseUrl = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD8xMA5-h0TkqjklkIHlzP09egc0fqyg7g"
   const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
   const [message, setMessage] = useState(""); // <---

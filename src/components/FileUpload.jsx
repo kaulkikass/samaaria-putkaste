@@ -6,10 +6,10 @@ function FileUpload(props) {
   // Set the configuration for your app
   // TODO: Replace with your app's config object
   const firebaseConfig = {
-    apiKey: 'AIzaSyB_wh8v_WLLMaOSZGejwqUy9JYfVtrCYuk',
-    authDomain: 'react-webshop-07-22.web.app',
-    databaseURL: 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/',
-    storageBucket: 'gs://react-webshop-07-22.appspot.com'
+    apiKey: 'AIzaSyD8xMA5-h0TkqjklkIHlzP09egc0fqyg7g',
+    authDomain: 'samaaria-putkaste.web.app',
+    databaseURL: 'https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/',
+    storageBucket: 'gs://samaaria-putkaste.appspot.com'
   };
   const firebaseApp = initializeApp(firebaseConfig);
   const storage = getStorage(firebaseApp);

@@ -26,7 +26,43 @@
   border: 1px solid red;
 }
 
-.carousel {
-    width: 500px;
-    margin: auto;
+.carouselItemCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #AECB06;
+}
+
+.carousel-control-next-icon {
+  background-image: url("./assets/next.png");
+  opacity: 1;
+}
+.carousel-control-prev-icon {
+  background-image: url("./assets/back.png");
+  opacity: 1;
+
+}
+
+.carousel-control-prev { 
+  opacity:1
+}
+
+.carousel-control-next { 
+  opacity:1
+}
+
+.newProductsBar {
+  margin-top:80px;
+  display: flex;
+  height: 66px;
+  background-color:#988157;
+  justify-content: center;
+  align-items: center;
+  font-size:24px;
+  color:#F7F0E5;
+  border-radius: 10px;
+
 }

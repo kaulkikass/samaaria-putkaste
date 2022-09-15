@@ -18,7 +18,7 @@ function EditProduct() {
     //Number() sest see id on stringina URList
     const index = products.findIndex(element => Number(element.id) === Number(id));
     const product = products[index];
-    const productsDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/products.json';
+    const productsDb = 'https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/products.json';
     
     const [categories, setCategories] = useState([]);                                  ///!!!! categories
     const categoriesDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/categories.json';

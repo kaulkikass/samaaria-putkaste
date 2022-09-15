@@ -49,7 +49,7 @@ import { useParams } from "react-router-dom";
 function SingleProduct() {
     const {productId} = useParams();
     const [product, setProduct] = useState({}) //TYHI OBJEKT
-    const productsDb = 'https://react-webshop-07-22-default-rtdb.europe-west1.firebasedatabase.app/products.json'
+    const productsDb = 'https://samaaria-putkaste-default-rtdb.europe-west1.firebasedatabase.app/products.json'
 
     useEffect(() => {
         fetch(productsDb)
